@@ -12,17 +12,17 @@ The framework supports both **Apex and Flow** - empowering developers and admini
 
 ## Documentation
 
-Full documentation is available at **[mitchspano.github.io/trigger-actions-framework](https://mitchspano.github.io/trigger-actions-framework/)**, including:
+Full documentation is available at **[mitchspano.com/trigger-actions-framework](https://mitchspano.com/trigger-actions-framework/)**, including:
 
-- [Getting Started](https://mitchspano.github.io/trigger-actions-framework/#/getting-started)
-- [Apex Actions](https://mitchspano.github.io/trigger-actions-framework/#/apex-actions)
-- [Flow Actions](https://mitchspano.github.io/trigger-actions-framework/#/flow-actions)
-- [Entry Criteria Formula](https://mitchspano.github.io/trigger-actions-framework/#/entry-criteria)
-- [Bypass Mechanisms](https://mitchspano.github.io/trigger-actions-framework/#/bypass-mechanisms)
-- [Recursion Prevention](https://mitchspano.github.io/trigger-actions-framework/#/recursion-prevention)
-- [Avoid Repeated Queries](https://mitchspano.github.io/trigger-actions-framework/#/avoid-repeated-queries)
-- [DML-Less Testing](https://mitchspano.github.io/trigger-actions-framework/#/dml-less-testing)
-- [DML Finalizers](https://mitchspano.github.io/trigger-actions-framework/#/dml-finalizers)
+- [Getting Started](https://mitchspano.com/trigger-actions-framework/#/getting-started)
+- [Apex Actions](https://mitchspano.com/trigger-actions-framework/#/apex-actions)
+- [Flow Actions](https://mitchspano.com/trigger-actions-framework/#/flow-actions)
+- [Entry Criteria Formula](https://mitchspano.com/trigger-actions-framework/#/entry-criteria)
+- [Bypass Mechanisms](https://mitchspano.com/trigger-actions-framework/#/bypass-mechanisms)
+- [Recursion Prevention](https://mitchspano.com/trigger-actions-framework/#/recursion-prevention)
+- [Avoid Repeated Queries](https://mitchspano.com/trigger-actions-framework/#/avoid-repeated-queries)
+- [DML-Less Testing](https://mitchspano.com/trigger-actions-framework/#/dml-less-testing)
+- [DML Finalizers](https://mitchspano.com/trigger-actions-framework/#/dml-finalizers)
 
 ## Contributing
 
