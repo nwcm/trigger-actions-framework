@@ -73,7 +73,7 @@ public class OpportunityTriggerHandler extends TriggerHandler {
 }
 ```
 
-The handler is now a god class. It has too much responsibility, too many contributors, and no clear ownership. Any time someone on the team ships a new Opportunity automation, they touch this file — which means merge conflicts are a regular occurrence. And keep in mind: this example is unusually clean; handlers in the real world are rarely this tidy.
+The handler is now a god class. It has too much responsibility, too many contributors, and no clear ownership. Any time someone on the team ships a new Opportunity automation, they touch this file - which means merge conflicts are a regular occurrence. And keep in mind: this example is unusually clean; handlers in the real world are rarely this tidy.
 
 ## The Root Cause
 
@@ -94,8 +94,8 @@ public class TA_Opportunity_HandleWholesaleInsert implements TriggerAction.After
 }
 ```
 
-The order of execution, the trigger context, and whether an action is active are all controlled through custom metadata records — not code. Shipping a new automation means creating a new class and a new metadata record. No existing file is touched, so there are no merge conflicts by design.
+The order of execution, the trigger context, and whether an action is active are all controlled through custom metadata records - not code. Shipping a new automation means creating a new class and a new metadata record. No existing file is touched, so there are no merge conflicts by design.
 
-Each action class can be tested by instantiating it directly and passing in a list of records — no DML required. And because each action is its own unit, it can be bypassed independently without affecting anything else.
+Each action class can be tested by instantiating it directly and passing in a list of records - no DML required. And because each action is its own unit, it can be bypassed independently without affecting anything else.
 
 [Get Started](getting-started.md) to enable the framework on your first object.
