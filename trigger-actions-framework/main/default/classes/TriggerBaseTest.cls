@@ -48,7 +48,6 @@ private class TriggerBaseTest {
 		Test.stopTest();
 	}
 
-
 	@IsTest
 	private static void sObjectNameShouldBePopulatedFromTriggerNew() {
 		base.triggerOld = null;

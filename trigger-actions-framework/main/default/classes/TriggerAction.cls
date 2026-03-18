@@ -33,11 +33,13 @@
  * To implement a Trigger Action, you must create a class that implements one or more of the `TriggerAction` interfaces.
  */
 @SuppressWarnings('PMD.CyclomaticComplexity')
+@NamespaceAccessible
 public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed before
 	 * a new record is inserted.
 	 */
+	@NamespaceAccessible
 	public interface BeforeInsert {
 		/**
 		 * @description This method is called before a new record is inserted.
@@ -50,6 +52,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed after a new record is inserted.
 	 */
+	@NamespaceAccessible
 	public interface AfterInsert {
 		/**
 		 * @description This method is called after a new record is inserted.
@@ -62,6 +65,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed before a record is updated.
 	 */
+	@NamespaceAccessible
 	public interface BeforeUpdate {
 		/**
 		 * @description This method is called before a record is updated.
@@ -75,6 +79,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed after a record is updated.
 	 */
+	@NamespaceAccessible
 	public interface AfterUpdate {
 		/**
 		 * @description This method is called after a record is updated.
@@ -88,6 +93,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed before a record is deleted.
 	 */
+	@NamespaceAccessible
 	public interface BeforeDelete {
 		/**
 		 * @description This method is called before a record is deleted.
@@ -100,6 +106,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed after a record is deleted.
 	 */
+	@NamespaceAccessible
 	public interface AfterDelete {
 		/**
 		 * @description This method is called after a record is deleted.
@@ -112,6 +119,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed after a record is undeleted.
 	 */
+	@NamespaceAccessible
 	public interface AfterUndelete {
 		/**
 		 * @description This method is called after a record is undeleted.
@@ -124,6 +132,7 @@ public class TriggerAction {
 	/**
 	 * @description This interface defines the logic that should be executed after all DML operations have completed.
 	 */
+	@NamespaceAccessible
 	public interface DmlFinalizer {
 		/**
 		 * @description This method is called after all DML operations have completed.

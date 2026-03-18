@@ -78,6 +78,7 @@
 @SuppressWarnings(
 	'PMD.CognitiveComplexity,PMD.StdCyclomaticComplexity,PMD.CyclomaticComplexity'
 )
+@NamespaceAccessible
 public inherited sharing class MetadataTriggerHandler extends TriggerBase implements TriggerAction.BeforeInsert, TriggerAction.AfterInsert, TriggerAction.BeforeUpdate, TriggerAction.AfterUpdate, TriggerAction.BeforeDelete, TriggerAction.AfterDelete, TriggerAction.AfterUndelete {
 	private static final String DOUBLE_UNDERSCORE = '__';
 	private static final String EMPTY_STRING = '';
@@ -125,6 +126,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param actionName The name of the Trigger Action to bypass.
 	 */
+	@NamespaceAccessible
 	public static void bypass(String actionName) {
 		MetadataTriggerHandler.bypassedActions.add(actionName);
 	}
@@ -134,6 +136,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param actionName The name of the Trigger Action to clear the bypass for.
 	 */
+	@NamespaceAccessible
 	public static void clearBypass(String actionName) {
 		MetadataTriggerHandler.bypassedActions.remove(actionName);
 	}
@@ -144,6 +147,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 * @param actionName The name of the Trigger Action to check.
 	 * @return True if the Trigger Action is bypassed, false otherwise.
 	 */
+	@NamespaceAccessible
 	public static Boolean isBypassed(String actionName) {
 		return MetadataTriggerHandler.bypassedActions.contains(actionName);
 	}
@@ -153,6 +157,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param actionType The Type of the Trigger Action to bypass.
 	 */
+	@NamespaceAccessible
 	public static void bypass(System.Type actionType) {
 		MetadataTriggerHandler.bypassedActions.add(actionType.getName());
 	}
@@ -162,6 +167,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param actionType The Type of the Trigger Action to clear the bypass for.
 	 */
+	@NamespaceAccessible
 	public static void clearBypass(System.Type actionType) {
 		MetadataTriggerHandler.bypassedActions.remove(actionType.getName());
 	}
@@ -172,6 +178,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 * @param actionType The Type of the Trigger Action to check.
 	 * @return True if the Trigger Action is bypassed, false otherwise.
 	 */
+	@NamespaceAccessible
 	public static Boolean isBypassed(System.Type actionType) {
 		return MetadataTriggerHandler.bypassedActions.contains(
 			actionType.getName()
@@ -181,6 +188,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	/**
 	 * @description Clear all bypasses for Trigger Actions.
 	 */
+	@NamespaceAccessible
 	public static void clearAllBypasses() {
 		MetadataTriggerHandler.bypassedActions.clear();
 	}
@@ -190,6 +198,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param triggerNew The list of new records being inserted.
 	 */
+	@NamespaceAccessible
 	public void beforeInsert(List<SObject> triggerNew) {
 		this.executeActions(TriggerOperation.BEFORE_INSERT, triggerNew, null);
 	}
@@ -199,6 +208,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param triggerNew The list of new records that were inserted.
 	 */
+	@NamespaceAccessible
 	public void afterInsert(List<SObject> triggerNew) {
 		this.executeActions(TriggerOperation.AFTER_INSERT, triggerNew, null);
 	}
@@ -209,6 +219,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 * @param triggerNew The list of updated records.
 	 * @param triggerOld The list of old records before the update.
 	 */
+	@NamespaceAccessible
 	public void beforeUpdate(List<SObject> triggerNew, List<SObject> triggerOld) {
 		this.executeActions(TriggerOperation.BEFORE_UPDATE, triggerNew, triggerOld);
 	}
@@ -219,6 +230,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 * @param triggerNew The list of updated records.
 	 * @param triggerOld The list of old records before the update.
 	 */
+	@NamespaceAccessible
 	public void afterUpdate(List<SObject> triggerNew, List<SObject> triggerOld) {
 		this.executeActions(TriggerOperation.AFTER_UPDATE, triggerNew, triggerOld);
 	}
@@ -228,6 +240,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param triggerOld The list of records being deleted.
 	 */
+	@NamespaceAccessible
 	public void beforeDelete(List<SObject> triggerOld) {
 		this.executeActions(TriggerOperation.BEFORE_DELETE, null, triggerOld);
 	}
@@ -237,6 +250,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param triggerOld The list of records that were deleted.
 	 */
+	@NamespaceAccessible
 	public void afterDelete(List<SObject> triggerOld) {
 		this.executeActions(TriggerOperation.AFTER_DELETE, null, triggerOld);
 	}
@@ -246,6 +260,7 @@ public inherited sharing class MetadataTriggerHandler extends TriggerBase implem
 	 *
 	 * @param triggerNew The list of records that were undeleted.
 	 */
+	@NamespaceAccessible
 	public void afterUndelete(List<SObject> triggerNew) {
 		this.executeActions(TriggerOperation.AFTER_UNDELETE, triggerNew, null);
 	}

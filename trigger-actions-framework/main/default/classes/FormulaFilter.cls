@@ -19,7 +19,8 @@
  * entry criteria formula defined within a `Trigger_Action__mdt` configuration row.
  */
 @SuppressWarnings('PMD.AvoidGlobalModifier, PMD.FieldsSortedAlphabetically')
-global class FormulaFilter {
+@NamespaceAccessible
+public class FormulaFilter {
 	private static final String ERROR_PREFIX = 'Please check the `SObject_Trigger_Setting__mdt` metadata for the the {0} sObject.';
 	@TestVisible
 	private static final String MISSING_CLASS_NAME =
