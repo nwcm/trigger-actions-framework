@@ -1,3 +1,20 @@
+This fork provides a single custom setting option for org level disabling of all trigger actions accross sobjects. 
+
+This provides the below additional functionality:
+
+1. Trigger actions become opt-in for apex tests. Trigger actions will not run on DML in apex test context, this is useful for existing source with apex tests with unmocked DML.
+2. Org admin can disable all trigger actions (all objects) in a single place. While the framework provides "bypass permission" this needs to be configured per sobject or trigger action and leaves room for error or additional effort.
+
+To enable a trigger in a apex test. Simply upsert the custom setting in setup or the test. All other bypass mechanisms are intact and can be used as documented.
+
+```apex
+@TestSetup
+	static void setup() {
+		upsert new Trigger_Action_Framework_Settings__c(IsEnabled__c = true);
+	}
+```
+
+
 # Trigger Actions Framework
 
 #### [Unlocked Package Installation (Production)](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tKY000000R0yHYAS)

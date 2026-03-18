@@ -298,6 +298,10 @@ public inherited sharing virtual class TriggerBase {
 	}
 
 	private Boolean shouldRun() {
+		if (Trigger_Action_Framework_Settings__c.getInstance().IsEnabled__c == false) {
+			return false;
+		}
+
 		if (!Trigger.isExecuting && this.context == null) {
 			throw new TriggerBaseException(HANDLER_OUTSIDE_TRIGGER_MESSAGE);
 		}

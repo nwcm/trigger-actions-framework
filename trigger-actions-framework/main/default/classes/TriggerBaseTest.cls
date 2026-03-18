@@ -41,6 +41,14 @@ private class TriggerBaseTest {
 		base.triggerOld = new List<SObject>{ MY_ACCOUNT };
 	}
 
+	@TestSetup
+	static void setup() {
+		Test.startTest();
+		upsert new Trigger_Action_Framework_Settings__c(IsEnabled__c = true);
+		Test.stopTest();
+	}
+
+
 	@IsTest
 	private static void sObjectNameShouldBePopulatedFromTriggerNew() {
 		base.triggerOld = null;
